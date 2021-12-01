@@ -13,7 +13,12 @@ objetoPessoa.Sobrenome = "Silva";
 Console.WriteLine($"o nome da pessoa é {objetoPessoa.Nome} {objetoPessoa.Sobrenome}");
 
 //passando parâmetro da sobrecarga do construtor
-Pessoa novoObjetoPessoa = new("Maria", "Silva", new DateTime(2000,10,08));
+Console.WriteLine("digite a sua data de nascimento (dd/MM/aaaa)");
+String? textoDataNascimento = Console.ReadLine();
+int ano = Convert.ToInt32(textoDataNascimento?.Substring(6, 4));
+int mes = Convert.ToInt32(textoDataNascimento?.Substring(3, 2));
+int dia = Convert.ToInt32(textoDataNascimento?.Substring(0, 2));
+Pessoa novoObjetoPessoa = new("Maria", "Silva", new DateTime(ano, mes, dia));
 Console.WriteLine($"o nome da pessoa do novo objeto é {novoObjetoPessoa.Nome} {novoObjetoPessoa.Sobrenome}. {novoObjetoPessoa.CalculaIdade()}");
 }
 }
