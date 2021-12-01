@@ -18,7 +18,15 @@ public Pessoa(String Nome, String Sobrenome, DateTime dataNascimento){
 //this acessa os membros de dentro da própria classe
 this.Nome = Nome;
 this.Sobrenome = Sobrenome;
-this.DataNascimento = DataNascimento;
+this.DataNascimento = dataNascimento;
+}
+public String CalculaIdade(){
+    int anos = DateTime.Now.Year - this.DataNascimento.Year;
+    if (this.DataNascimento.Month > DateTime.Now.Month)
+    anos--;
+
+    return $"{this.Nome} têm {anos} anos de idade";
+
 }
  }   
 }

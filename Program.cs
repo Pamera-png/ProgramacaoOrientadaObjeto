@@ -13,8 +13,8 @@ objetoPessoa.Sobrenome = "Silva";
 Console.WriteLine($"o nome da pessoa é {objetoPessoa.Nome} {objetoPessoa.Sobrenome}");
 
 //passando parâmetro da sobrecarga do construtor
-Pessoa novoObjetoPessoa = new("Maria", "Silva", DateTime.Now);
-Console.WriteLine($"o nome da pessoa do novo objeto é {novoObjetoPessoa.Nome} {novoObjetoPessoa.Sobrenome}");
+Pessoa novoObjetoPessoa = new("Maria", "Silva", new DateTime(2000,10,08));
+Console.WriteLine($"o nome da pessoa do novo objeto é {novoObjetoPessoa.Nome} {novoObjetoPessoa.Sobrenome}. {novoObjetoPessoa.CalculaIdade()}");
 }
 }
 }
